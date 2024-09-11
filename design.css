@@ -1,0 +1,27 @@
+.container
+{
+    display: grid;
+    height: 100vh;
+
+    grid-template-areas:
+    "header . . header header"
+    ". main main mian mian"
+    ". . . footer footer";
+background-color: rgb(166, 204, 216);
+}
+header{
+    grid-area:header;
+    background-color: black;
+}
+main{
+    grid-area: main;
+    background-color: blue;
+}
+footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}
+html,
+body{
+    height: 70px;
+}
