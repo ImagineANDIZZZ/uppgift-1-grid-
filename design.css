@@ -2,53 +2,67 @@
 {
     display: grid;
     height: 100vh;
-
+    grid-template-columns:repeat(5,1fr) ;
+    grid-template-rows: 2fr 3fr 2fr;
     grid-template-areas:
     "header header header header header"
     "main1 sidebar1 sidebar2 sidebar3 main2"
-    "footer footer footer footer footer";
-background-color: rgb(166, 204, 216);
+    "footer2 footer footer footer footer";
+    background-color: rgb(166, 204, 216);
 }
+
 header{
     grid-area:header;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(59, 33, 33);
 }
 #main1{
     grid-area: main1;
-    background-color: rgb(145, 255, 0);
+    background-color: rgb(0, 255, 21);
 }
-
 #main2{
     grid-area: main2;
-    background-color: rgb(145, 255, 0);
+    background-color: rgb(0, 255, 21);
 }
-footer{
+#f1{
     grid-area: footer;
-    background-color: rgb(0, 4, 252);
+    background-color: rgb(159, 198, 216);
+}
+#f2{
+    grid-area: footer2;
+    background-color: rgb(203, 216, 205);
+
 }
 #aside1{
     grid-area: sidebar1;
-    background-color: rgb(145, 255, 0);
+    background-color: rgb(120, 0, 255);
+    grid-auto-rows: minmax(100px,auto);
 }
 #aside2{
     grid-area: sidebar2;
-    background-color: rgb(145, 255, 0);
+    background-color: rgb(120, 0, 255);
+    grid-auto-rows: minmax(100px,auto);
 }
 #aside3{
     grid-area: sidebar3;
-    background-color: rgb(145, 255, 0);
+    background-color: rgb(120, 0, 255);
+    grid-auto-rows: minmax(100px,auto);
 }
 
 #aside1:hover> img{
 visibility: visible;
 }
 #aside1> img{
-    visibility: hidden;
-    }
-#aside2:hover{
-    background-color: rgb(35, 120, 194);
+visibility: hidden;
 }
-#aside3:hover{
-    background-color: rgb(35, 120, 194);
+#aside2:hover> img{
+visibility: visible;
 }
-html,
+#aside2> img{
+visibility: hidden;
+}
+#aside3:hover> img{
+visibility: visible;
+}
+#aside3> img{
+visibility: hidden;
+}
